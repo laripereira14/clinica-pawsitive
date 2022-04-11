@@ -14,6 +14,8 @@ module.exports = {
       },
       backgroundImage: theme => ({
         'pattern': "url('./assets/pattern2.svg')",
+        'test':"url('https://i.pinimg.com/originals/e4/04/5e/e4045e650904aac0b99bbd057e802f2b.jpg')"
+
       })
     }
   },

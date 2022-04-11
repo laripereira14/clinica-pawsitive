@@ -3,9 +3,9 @@ import SectionTitle from 'components/SectionTitle';
 
 const About = () => {
     return (
-        <section className="bg-white py-8 px-16 flex flex-col justify-center items-center md:block md:px-40 md:py-12">
-            <SectionTitle color="primary-pink"> Sobre a Pawsitive </SectionTitle>
-            <img src={DogImg} className="w-5/6 order-2 md:w-4/12 md:float-left md:[shape-outside:url(assets/images/6.png)] md:[shape-margin:2rem]"/>
+        <section className="bg-white py-8 px-16 md:px-10 lg:px-14 flex flex-col justify-center items-center md:block md:px-40 md:py-12">
+            <SectionTitle color="primary-pink" classes="md:mb-10"> Sobre a Pawsitive </SectionTitle>
+            <img src={DogImg} className="w-5/6 order-2 md:w-5/12 md:mt-6 md:float-left md:[shape-outside:url(assets/images/6.png)] md:[shape-margin:2rem] lg:w-4/12"/>
             <p className="text-black leading-normal text-justify my-8 order-1 md:leading-loose md:mt-6"> A palavra "paw" significa "pata" em inglês e "positive" significa "positivo". Foi a partir da junção das duas que nasceu a Pawsitive, uma clínica veterinária criada por quem ama animais e sabe como eles devem ser tratados. 
             </p>
         </section>

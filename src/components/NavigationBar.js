@@ -7,10 +7,10 @@ import NavigationLink from './NavigationLink';
 
 const NavigationBar = () => {
     return (
-        <header className="flex justify-between items-center w-full pt-6 pb-8 px-6 md:justify-evenly fixed top-0 bg-primary-pink text-white font-medium">
+        <header className="flex justify-between items-center w-full pt-6 pb-8 px-6 md:px-12 md:flex-wrap fixed top-0 bg-primary-pink text-white font-medium">
             <div className="md:hidden"><MenuIcon className="h-7 w-7"/></div>
-                <img src={Logo} className="w-1/2 md:w-2/12"/>
-                <nav className="hidden md:block mt-4">
+                <img src={Logo} className="w-1/2 md:w-2/6 md:order-1 lg:w-1/5"/>
+                <nav className="hidden md:block mt-4 md:flex-1 md:order-3 lg:order-2">
                     <ul className="flex space-x-10 justify-center text-white font-bold">
                         <NavigationLink path="/"> Ínicio </NavigationLink>
                         <NavigationLink path="/"> Sobre </NavigationLink>
@@ -18,8 +18,8 @@ const NavigationBar = () => {
                         <NavigationLink path="/"> Agendamento </NavigationLink>
                     </ul>
                 </nav>
-            <div> 
-                <PhoneIcon class="h-7 w-7 md:hidden"/> 
+            <div className="md:order-2 lg:order-3"> 
+                <PhoneIcon className="h-7 w-7 md:hidden"/> 
                 <div className="hidden md:block text-center ml-10">
                     <p>(21) 33490-6743</p>
                     <p> Rua Professor Raphael, 52</p>
