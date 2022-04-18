@@ -1,6 +1,6 @@
 import Logo from 'assets/logo-full.svg';
 
-import { MenuIcon,  } from '@heroicons/react/outline';
+import { MenuIcon } from '@heroicons/react/outline';
 import { PhoneIcon } from '@heroicons/react/solid'
 
 import NavigationLink from './NavigationLink';

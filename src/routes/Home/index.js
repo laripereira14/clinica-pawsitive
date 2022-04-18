@@ -1,4 +1,5 @@
 import About from './components/About';
+import Booking from './components/Booking';
 import HeroSection from './components/HeroSection';
 import Specialities from './components/Specialities';
 
@@ -8,6 +9,7 @@ const Home = () => {
             <HeroSection/>
             <About/>
             <Specialities/>
+            <Booking/>
         </main>
         
     )
