@@ -1,6 +1,6 @@
-const PawPatternBackground = ({ children, classes }) => {
+const PawPatternBackground = ({ children, classes, ...props }) => {
     return (
-        <section className={`bg-pattern bg-center bg-[length:100rem] md:bg-[length:120%] md:bg-no-repeat ${classes}`}>
+        <section className={`bg-pattern bg-center bg-[length:100rem] md:bg-[length:180%] md:bg-no-repeat lg:bg-[length:120%] ${classes}`} {...props}>
            { children }
         </section>
     );

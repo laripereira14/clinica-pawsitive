@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom';
+import Link from "./Link";
 
-const NavigationLink = ({ children, path }) => {
+const NavigationLink = ({ path, children }) => {
+
     return (
         <li className="md:border-b-4 md:border-transparent md:hover:border-b-4 hover:border-primary-green transition-all"> 
-            <Link to={path}> {children} </Link>
+           <Link path={path}> {children} </Link>
         </li>
     )
 }

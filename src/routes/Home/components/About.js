@@ -1,13 +1,19 @@
 import DogImg from 'assets/images/6.png';
+import Carousel from 'components/Carousel';
+
 import SectionTitle from 'components/SectionTitle';
+import Testimonial from 'components/Testimonial';
 
 const About = () => {
     return (
-        <section className="bg-white py-8 px-16 flex flex-col justify-center items-center md:block md:px-20 md:py-12 lg:px-28">
-            <SectionTitle color="primary-pink" classes="md:mb-10"> Sobre a Pawsitive </SectionTitle>
-            <img src={DogImg} className="w-5/6 order-2 md:w-5/12 md:float-left md:[shape-outside:url(assets/images/6.png)] md:[shape-margin:1rem] lg:[shape-margin:2rem] lg:w-4/12"/>
-            <p className="text-black leading-normal text-justify my-8 order-1 md:leading-loose md:mt-6"> A palavra "paw" significa "pata" em inglês e "positive" significa "positivo". Foi a partir da junção das duas que nasceu a Pawsitive, uma clínica veterinária criada por quem ama animais e sabe como eles devem ser tratados. 
-            </p>
+        <section id="about" className="bg-white py-8 px-16 flex flex-col justify-center items-center md:inline-block md:px-20 md:py-12 lg:px-28">
+            <SectionTitle classes="text-primary-pink md:mb-10"> Sobre a Pawsitive </SectionTitle>
+            <img src={DogImg} className="hidden md:inline-block md:w-5/12 md:float-left md:[shape-outside:url(assets/images/6.png)] md:[shape-margin:1rem] lg:[shape-margin:2rem] lg:w-4/12"/>
+            <div className="text-black leading-normal text-justify my-8 order-1 md:leading-loose md:mt-6"> 
+                <p>A palavra "paw" significa "pata" em inglês e "positive" significa "positivo". Foi a partir da junção das duas que nasceu a Pawsitive, uma clínica veterinária criada no Rio de Janeiro em 2012 por quem ama animais e sabe como eles devem ser tratados. Aqui, prezamos pelo bem estar do seu companheiro acima de tudo, e por isso, não medimos esforços para entregar uma clínica profissional, higienizada, moderna e completa. </p>
+                <p>Nossa equipe profissional é excelente e está preparada para atender desde um banho e tosa a um procedimento cirúrgico. Utilizamos tecnologias avançadas para a realização de nossos serviços, sem deixar de lado o amor pelos animais. Assim como na sua vida, na Pawsitive eles também são os protagonistas e, portanto, serão tratados da melhor maneira. </p>
+                <Carousel/>
+            </div>
         </section>
     
     );
@@ -15,10 +21,4 @@ const About = () => {
 
 export default About;
 
-/**<div className="bg-white py-8 px-20 space-y-5 flex flex-col justify-center items-center md:flex-row md:flex-wrap">
-           <h2 className="text-3xl font-bold text-primary-pink md:text-4xl md:w-full text-center"> Sobre a Pawsitive </h2>
-           <p className="text-black leading-relaxed text-justify md:flex-1 md:order-2 "> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci quia voluptates assumenda alias ullam ad repellendus ut, aspernatur rerum accusantium illo placeat fugiat quasi facere eveniet? Est impedit natus magnam ad nesciunt tenetur vitae mollitia nemo laboriosam nobis pariatur ab adipisci, ipsa suscipit, ratione placeat sunt hic quas, eos officiis eius. Eveniet quae nesciunt quibusdam deleniti ut dolor nobis doloremque laboriosam. Qui aliquid laboriosam fugiat. Unde eveniet odio dolore, incidunt quasi blanditiis ad quod reiciendis, deleniti ipsum nesciunt omnis et vero consequatur perferendis vel laboriosam nemo aliquam sint quae alias recusandae rem enim.  orem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci quia voluptates assumenda alias ullam ad repellendus ut, aspernatur rerum accusantium illo placeat fugiat quasi facere eveniet? Est impedit natus magnam ad nesciunt tenetur vitae mollitia nemo laboriosam nobis pariatur ab adipisci, ipsa suscipit, ratione placeat sunt hic quas, eos officiis eius. Eveniet quae nesciunt quibusdam deleniti ut dolor nobis doloremque laboriosam. Qui aliquid laboriosam fugiat. Unde eveniet odio dolore, incidunt quasi blanditiis ad quod reiciendis, deleniti ipsum nesciunt omnis et vero consequatur perferendis vel laboriosam nemo aliquam sint quae alias recusandae rem enim.orem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci quia voluptates assumenda alias ullam ad repellendus ut, aspernatur rerum accusantium illo placeat fugiat quasi facere eveniet? Est impedit natus magnam ad nesciunt tenetur vitae mollitia nemo laboriosam nobis pariatur ab adipisci, ipsa suscipit, ratione placeat sunt hic quas, eos officiis eius. Eveniet quae nesciunt quibusdam deleniti ut dolor nobis doloremque laboriosam. Qui aliquid laboriosam fugiat. Unde eveniet odio dolore, incidunt quasi blanditiis ad quod reiciendis, deleniti ipsum nesciunt omnis et vero consequatur perferendis vel laboriosam nemo aliquam sint quae alias recusandae rem enim.</p>
-            <div className="w-5/6 md:w-4/12 md:order-1 md:float-left md:[shape-outside:url(assets/images/6.png)]"></div>
-       </div>
-    );
-} */
+
