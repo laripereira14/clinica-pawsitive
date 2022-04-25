@@ -1,4 +1,3 @@
-import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid";
 import { useState } from "react";
 
 const Select = ({ field, options, selectedOption }) => {

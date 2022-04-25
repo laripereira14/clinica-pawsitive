@@ -1,6 +1,6 @@
-const Testimonial = ({ text, photo, owner }) => {
+const Testimonial = ({ text, photo, owner, ...props }) => {
     return (
-        <div className="flex flex-col items-center mt-8 text-neutral-600 md:p-8 md:flex-row md:items-start">
+        <div className="flex flex-col items-center mt-8 text-neutral-600 md:p-8 md:flex-row md:items-start" {...props}>
             <blockquote className="p-4 text-lg italic border-l-4 border-primary-pink">
                 <p className="mb-4">"{text}"</p>    
                 <cite className="flex flex-col items-start text-base italic">
