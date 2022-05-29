@@ -19,7 +19,10 @@ const Form = () => {
             setMessage('Insira um celular válido.');
         } else {
             setMessage('');
-            sendMail(data).then(res => setMessage(res.data));
+            sendMail(data).then(res => {
+                setMessage(res.data);
+                setData({ name: '', phone: '', subject: '', message: ''});
+            });
         }
     }
 
