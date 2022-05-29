@@ -7,6 +7,7 @@
 
     function sendMail($nome, $phone, $subject, $message) {
         $mail = new PHPMailer();
+        $mail->CharSet = 'UTF-8';
         $mail->SMTPDebug = 0;
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
