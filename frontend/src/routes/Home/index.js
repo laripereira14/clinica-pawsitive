@@ -1,7 +1,7 @@
-import About from './components/About';
-import Booking from './components/Booking';
-import HeroSection from './components/HeroSection';
-import Specialities from './components/Specialties';
+import About from './About';
+import Booking from './Booking';
+import HeroSection from './HeroSection';
+import Specialities from './Specialties';
 
 const Home = () => {
     return (

@@ -9,7 +9,7 @@ const Input = ({ type, field, expand, ...props }) => {
                 <textarea value={value} onChange={(e) => setValue(e.target.value)} className="bg-[#f1f1f1] p-2 rounded-md ml-2 text-[#5e5e5e] resize-none w-full md:w-10/12" rows="6" cols="30" {...props}/>
             ) : (
                 <input 
-                    className="bg-[#f1f1f1] p-2 rounded-md ml-2 text-[#5e5e5e] md:w-10/12"
+                    className="bg-[#eeeeee] p-2 rounded-md ml-2 text-[#555555] md:w-10/12"
                     type={type} 
                     {...props} 
                 />

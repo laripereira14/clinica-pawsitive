@@ -1,14 +1,19 @@
+import { useState, useEffect } from 'react';
+
 import { sendMail } from 'api';
-import { useState } from 'react';
+import { formatPhone } from 'utils/functions';
 
 import Button from "./Button";
 import Input from "./Input";
+import Loader from './Loader';
 
-const Form = () => {
+const Form = ({ formData }) => {
     const [data, setData] = useState({ name: '', phone: '', subject: '', message: ''});
     const [message, setMessage] = useState('');
 
-    const formatPhone = phone => phone.replace(/\D/g, '').replace(/(\d{2})(\d)(\d{4})(\d{4})$/, '($1) $2 $3-$4');
+    useEffect(() => {
+        if (formData) setData({...data, name: formData.nome, phone: formData.celular});
+    }, [])
 
     const handleOnChange = (e) => setData({...data, [e.target.name]: e.target.value});
     const handleSubmit = (e) => {
@@ -28,11 +33,11 @@ const Form = () => {
 
 
     return (
-        <form className="flex flex-col space-y-6 md:w-10/12 lg:w-5/12">
-            <Input type="text" field="Nome" name="name" maxLength="40" value={data.name} onChange={handleOnChange}/>
-            <Input type="tel" field="Celular" name="phone" maxLength="11" value={formatPhone(data.phone)} onChange={handleOnChange}/>
-            <Input type="text" field="Assunto" name="subject" value={data.subject} onChange={handleOnChange}/>
-            <Input expand type="text" field="Mensagem" name="message" value={data.message} onChange={handleOnChange}/>
+        <form className="flex flex-col space-y-6 md:w-10/12 lg:w-5/12 font-medium">
+            <Input type="text" field="Nome" name="name" placeholder="Seu nome" maxLength="40" value={data.name} onChange={handleOnChange}/>
+            <Input type="tel" field="Celular" name="phone" maxLength="11" placeholder="(00) 00000-0000" value={formatPhone(data.phone)} onChange={handleOnChange}/>
+            <Input type="text" field="Assunto" name="subject" value={data.subject} placeholder="Motivo do seu contato" onChange={handleOnChange}/>
+            <Input expand type="text" field="Mensagem" name="message" placeholder="Escreva sua mensagem..." value={data.message} onChange={handleOnChange}/>
             <Button classes="self-center" onClick={handleSubmit}> Enviar </Button>
             { message && <div> {message} </div>}
         </form>
@@ -40,13 +45,3 @@ const Form = () => {
 }
 
 export default Form; 
-
-/**  const options = [
-        { id: 1, title: 'Consultas'},
-        { id: 2, title: 'Exames'},
-        { id: 3, title: 'Emergência 24h'},
-        { id: 4, title: 'Vacinas'},
-        { id: 5, title: 'Banho e Tosa'},
-        { id: 6, title: 'Internação'}
-    ];
- */
