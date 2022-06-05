@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '3b9287bf6b2a51c6e4e7a5aa7aaf90d2a110fdeb',
+        'reference' => 'bc7c679cbb3f6cf9e52a025734055cf6d922b415',
         'name' => '__root__',
         'dev' => true,
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '3b9287bf6b2a51c6e4e7a5aa7aaf90d2a110fdeb',
+            'reference' => 'bc7c679cbb3f6cf9e52a025734055cf6d922b415',
             'dev_requirement' => false,
         ),
         'phpmailer/phpmailer' => array(

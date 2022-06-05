@@ -5,6 +5,13 @@
 
     require 'vendor/autoload.php';
 
+    $rest_json = file_get_contents("php://input");
+    $_POST = json_decode($rest_json, true);
+
+    if(isset($_POST['name'])) {
+        sendMail($_POST['name'], $_POST['phone'], $_POST['subject'], $_POST['message']);
+    }
+
     function sendMail($nome, $phone, $subject, $message) {
         $mail = new PHPMailer();
         $mail->SMTPDebug = 0;
